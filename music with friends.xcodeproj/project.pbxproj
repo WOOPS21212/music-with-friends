@@ -6,6 +6,11 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		892F880E2DC0824E00F1BF46 /* FirebaseCore in Frameworks */ = {isa = PBXBuildFile; productRef = 892F880D2DC0824E00F1BF46 /* FirebaseCore */; };
+		892F88102DC0824E00F1BF46 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 892F880F2DC0824E00F1BF46 /* FirebaseFirestore */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		892F879B2DC05F6B00F1BF46 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -52,6 +57,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				892F880E2DC0824E00F1BF46 /* FirebaseCore in Frameworks */,
+				892F88102DC0824E00F1BF46 /* FirebaseFirestore in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -112,6 +119,8 @@
 			);
 			name = "music with friends";
 			packageProductDependencies = (
+				892F880D2DC0824E00F1BF46 /* FirebaseCore */,
+				892F880F2DC0824E00F1BF46 /* FirebaseFirestore */,
 			);
 			productName = "music with friends";
 			productReference = 892F878C2DC05F6A00F1BF46 /* music with friends.app */;
@@ -195,6 +204,9 @@
 			);
 			mainGroup = 892F87832DC05F6A00F1BF46;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				892F880C2DC0824E00F1BF46 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 892F878D2DC05F6A00F1BF46 /* Products */;
 			projectDirPath = "";
@@ -593,6 +605,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		892F880C2DC0824E00F1BF46 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 11.12.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		892F880D2DC0824E00F1BF46 /* FirebaseCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 892F880C2DC0824E00F1BF46 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseCore;
+		};
+		892F880F2DC0824E00F1BF46 /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 892F880C2DC0824E00F1BF46 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 892F87842DC05F6A00F1BF46 /* Project object */;
 }
