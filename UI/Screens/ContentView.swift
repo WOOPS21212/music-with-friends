@@ -1,17 +1,8 @@
-//
-//  ContentView.swift
-//  music with friends
-//
-//  Created by amc on 4/28/25.
-//
-
-// This should be saved as ContentView.swift in the main app directory
 import SwiftUI
-import Combine
 
 struct ContentView: View {
-    @StateObject private var bluetoothManager = BluetoothManager()
-    @StateObject private var sessionManager = SessionManager()
+    @StateObject var bluetoothManager = BluetoothManager()
+    @StateObject var sessionManager = SessionManager()
     @State private var isAuthenticated = false
     @State private var activeSession = false
     
@@ -24,13 +15,13 @@ struct ContentView: View {
                 )
             } else {
                 SessionSelectionView(
-                    createNewSession: {
+                    createNewSession: { 
                         sessionManager.createSession(name: "My Music Session")
-                        activeSession = true
+                        activeSession = true 
                     },
-                    joinSession: {
+                    joinSession: { 
                         sessionManager.joinSession(sessionID: "demo-session")
-                        activeSession = true
+                        activeSession = true 
                     }
                 )
             }
